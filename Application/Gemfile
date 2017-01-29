@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.1'
+gem 'rails', '3.0.3'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -10,6 +10,7 @@ gem 'logging'
 gem 'builder'
 gem 'rails-erd'
 gem 'mysql2'
+gem 'activerecord-mysql2-adapter'
 gem 'rspec-rails', '>= 2.0.0'
 gem "haml"
 gem "haml-rails"
@@ -19,8 +20,8 @@ gem "jquery-rails"
 gem 'tabs_on_rails'
 #gem "jquery_ui_rails_helpers", :git => 'git://github.com/beardedstudio/jquery_ui_rails_helpers.git'
 #'git://github.com/CodeOfficer/jquery-ui-rails-helpers.git'
-gem 'twitter-auth', :require => 'twitter_auth/engine', :path => 'vendor/git/twitter-auth', :branch => 'rails_3'
-gem 'json'
+gem 'twitter-auth'
+# gem 'json'
 # Use unicorn as the web server
 # gem 'unicorn'
 
