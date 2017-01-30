@@ -4,5 +4,19 @@ services:
     build: ./Application
     ports:
       - "3000:3000"
+    # volumes:
+      # - ./Application:/root/webapp
+    links:
+      - db
+  db:
+    image: mysql:5.6
+    environment:
+      MYSQL_ROOT_PASSWORD: 'root'
+      MYSQL_DATABASE: TTMS_development
+      MYSQL_USER: ttms
+      MYSQL_PASSWORD: ttmspassword
+    ports:
+      - "3306:3306"
     volumes:
-      - ./Application:/root/webapp
+      - ./my.conf:/etc/mysql/conf.d
+      - ./Application/db/init.d:/docker-entrypoint-initdb.d

@@ -23,9 +23,14 @@ RUN bash -l -c 'rbenv global $RUBY_VERSION && gem install bundler -v $BUNDLE_VER
 WORKDIR $HOME
 RUN mkdir webapp
 WORKDIR $HOME/webapp
-COPY . .
+
+COPY Gemfile.lock .
+COPY Gemfile .
+COPY vendor vendor
 
 RUN rbenv exec bundle install
+
+COPY . .
 
 EXPOSE 3000
 

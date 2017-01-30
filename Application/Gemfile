@@ -20,8 +20,9 @@ gem "jquery-rails"
 gem 'tabs_on_rails'
 #gem "jquery_ui_rails_helpers", :git => 'git://github.com/beardedstudio/jquery_ui_rails_helpers.git'
 #'git://github.com/CodeOfficer/jquery-ui-rails-helpers.git'
-gem 'twitter-auth'
-# gem 'json'
+gem 'twitter-auth', :require => 'twitter_auth/engine', :path => 'vendor/git/twitter-auth'
+gem 'json'
+gem 'rake', '~> 0.8.7'
 # Use unicorn as the web server
 # gem 'unicorn'
 
